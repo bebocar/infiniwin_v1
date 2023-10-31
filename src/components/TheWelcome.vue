@@ -23,7 +23,7 @@ import '../assets/infiniwin/js/header.js'
 import '../assets/infiniwin/js/date.js'
 import '../assets/infiniwin/js/jackpot.js'
 import '../assets/infiniwin/js/slider.js'
-import '../assets/infiniwin/js/index.js'
+// import '../assets/infiniwin/js/index.js'
 // import '../assets/infiniwin/js/owl.carousel.min.js'
 // import '../assets/infiniwin/js/all.min.js'
 </script>

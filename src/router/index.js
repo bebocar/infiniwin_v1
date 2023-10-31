@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Login from '../views/auth/Login.vue'
 import Register from '../views/auth/Register.vue'
-import Aboutus from '../views/AboutUs.vue'
+// import Aboutus from '../views/AboutUs.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,14 +24,14 @@ const router = createRouter({
         requiresAuth: true
       }
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: Aboutus,
-      meta: {
-        requiresAuth: true
-      }
-    }
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   component: Aboutus,
+    //   meta: {
+    //     requiresAuth: true
+    //   }
+    // }
   ]
 })
 router.beforeEach((to, from, next) => {

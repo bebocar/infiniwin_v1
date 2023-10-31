@@ -1,0 +1,91 @@
+.esport{
+  min-height: 700px;
+  background-image:url('../Images/esport/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items: center;
+  position:relative;
+}
+
+.es_canvas{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index: 0;
+}
+
+.esport_content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.esport_item{
+  cursor:pointer;
+  transition: 0.3s;
+  position:relative;
+  margin:0 25px;
+}
+
+.esport_item img{
+  width:450px;
+  position:relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.left_play,.right_play{
+  position:absolute;
+  z-index: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background:linear-gradient(rgb(25,25,25),black);
+  color:white;
+  padding:10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.left_play{
+  top:70px;
+  right:150px;
+  padding-left: 25px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.right_play{
+  top:120px;
+  left:115px;
+  padding-right: 25px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+.esport_item:hover{
+  -moz-transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-filter:drop-shadow(2px 2px 5px var(--color1));
+  filter:drop-shadow(2px 2px 5px var(--color1));
+}
+
+.esport_item:hover .left_play{
+  right:110px;
+}
+
+.esport_item:hover .right_play{
+  left:80px;
+}
+
+.left_play:hover,.right_play:hover{
+  background: linear-gradient(var(--color1),var(--color2));
+  color:black;
+  font-weight: bold;
+}

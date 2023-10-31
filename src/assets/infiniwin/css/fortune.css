@@ -1,0 +1,7 @@
+.fortune{
+  display:flex;
+  justify-content: center;
+  background-image:url('../Images/fortune/bg.jpg');
+  background-repeat: repeat;
+  background-position: center;
+}

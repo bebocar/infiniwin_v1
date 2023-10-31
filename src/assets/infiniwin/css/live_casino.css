@@ -1,0 +1,141 @@
+.lc{
+  min-height:800px;
+  background-image:url('../img/lc/bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  position:relative;
+}
+
+.lc_content{
+  display:flex;
+  flex-wrap: wrap;
+  width:1000px;
+}
+
+.lc_item{
+  height:450px;
+  width:185px;
+  cursor:pointer;
+  transition: 0.3s;
+  position:relative;
+}
+
+.lc_item img{
+  height:100%;
+  width:100%;
+}
+
+.lc_item:hover{
+  -webkit-filter:saturate(1.2) contrast(1.5) brightness(0.9);
+  filter:saturate(1.2) contrast(1.5) brightness(0.9);
+}
+
+.lc_active{
+  -webkit-filter:saturate(1.5) contrast(1.5) brightness(0.9);
+  filter:saturate(1.5) contrast(1.5) brightness(0.9);
+}
+
+.lc_active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(#fdb509,#f03220);
+  opacity: 0.2;
+}
+
+/*-------------------Live Casino popout----------------------------------*/
+
+.lc_pop{
+  position:fixed;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.lc_pop_bg{
+  width:100%;
+  -webkit-animation: flip-horizontal-bck 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+	        animation: flip-horizontal-bck 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+}
+
+.pop_content{
+  position:relative;
+  width:400px;
+}
+
+.lc_play_btn{
+  position:absolute;
+  left:50%;
+  bottom:10%;
+  -moz-transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+}
+
+.lc_play_content{
+  position:relative;
+}
+
+.lc_play_content img{
+  width:480px;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.lc_play_content span{
+  position:absolute;
+  font-size: 55px;
+  left:50%;
+  bottom:50%;
+  -moz-transform:translate3d(-50%,-50%,0);
+  -webkit-transform:translate3d(-50%,-50%,0);
+  transform:translate3d(-50%,-50%,0);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background: linear-gradient(var(--color2),var(--color1),var(--color2));
+  -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.lc_play_btn:hover img{
+  transform:scale(1.1);
+}
+
+
+
+
+
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-horizontal-bck {
+  0% {
+    -webkit-transform: translateZ(0) rotateX(0);
+            transform: translateZ(0) rotateX(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-460px) rotateX(180deg);
+            transform: translateZ(-460px) rotateX(180deg);
+  }
+}
+@keyframes flip-horizontal-bck {
+  0% {
+    -webkit-transform: translateZ(0) rotateX(0);
+            transform: translateZ(0) rotateX(0);
+  }
+  100% {
+    -webkit-transform: translateZ(-460px) rotateX(180deg);
+            transform: translateZ(-460px) rotateX(180deg);
+  }
+}

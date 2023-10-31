@@ -1,0 +1,176 @@
+.index{
+  width:100%;
+  background-image: url('@/assets/infiniwin/img/index/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 30px;
+}
+
+.index_header{
+  background: var(--gradient1);
+}
+
+.index_header_content{
+  display:flex;
+  align-items: center;
+  padding:3px 0;
+  font-size: 14px;
+}
+
+
+.index_header_content img{
+  height:25px;
+  margin-right: 15px;
+}
+
+
+.hot_games{
+  display:flex;
+  margin-top: 30px;
+  padding:5px 0;
+  overflow: hidden;
+}
+
+.hot_item{
+  display:flex;
+  flex-direction: column;
+  margin-right: 20px;
+  -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.hot_item_img{
+  width:225px;
+}
+
+.hot_play{
+  font-family: 'Carter One', cursive;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient1);
+  text-decoration: none;
+  height:30px;
+}
+
+.hot_play span{
+  background:linear-gradient(#400b0b,#040404);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:drop-shadow(0 0 1px white);
+}
+
+.hot_play img{
+  width:50px;
+  margin:0 5px;
+}
+
+/*----------Box display------------*/
+
+.index_boxes{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.big_box{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:relative;
+  width:48%;
+}
+
+.box_header{
+  background: var(--gradient1);
+  display:flex;
+  align-items: center;
+  width:100%;
+  padding:3px 5px;
+}
+
+.box_header img{
+  height:30px;
+  margin-right: 10px;
+}
+
+.box_banner{
+  width:100%;
+  display:flex;
+}
+
+.box_banner img{
+  width:100%;
+}
+
+.jackpot{
+  width:100%;
+  position:absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  bottom:30px;
+  left:0;
+  font-size: 50px;
+  padding:0 70px;
+  font-weight: 900;
+  opacity: 0.7;
+}
+
+.jackpot_amount{
+  margin-left: 20px;
+}
+
+.small_box{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-in-blurred-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}

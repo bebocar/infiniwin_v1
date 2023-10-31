@@ -1,0 +1,147 @@
+.sidebanners{
+  width:100%;
+  height:100%;
+}
+
+.sidebanner{
+  position:fixed;
+  top:300px;
+  height:300px;
+  z-index: 1000;
+}
+
+.banner_left{
+  left:0;
+  width:150px;
+}
+
+.banner_right{
+  right:0;
+  width:130px;
+}
+
+
+.sidebanner_content{
+  background: #ecdc70;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  padding:20px 0;
+}
+
+.sidebanner_content_left{
+    clip-path: polygon(0% 0%, 60% 0%, 100% 50%, 60% 100%, 0% 100%);
+}
+
+.sidebanner_content_right{
+    clip-path: polygon(45% 0%, 100% 0%, 100% 100%, 45% 100%, 0% 50%);
+}
+
+
+.frame_l{
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  z-index: 1;
+  filter:drop-shadow(-2px 2px 2px rgb(40,40,40)) drop-shadow(0 -2px 2px rgb(40,40,40));
+  pointer-events: none;
+}
+
+.frame_r{
+  position:absolute;
+  right:0;
+  top:0;
+  height:100%;
+  z-index: 1;
+  filter:drop-shadow(-2px 2px 2px rgb(40,40,40)) drop-shadow(0 -2px 2px rgb(40,40,40));
+  pointer-events: none;
+}
+
+
+
+.crown{
+  position:absolute;
+  left:45px;
+  top:-55px;
+  width:100px;
+  z-index: 2;
+  filter:drop-shadow(-2px 2px 2px rgb(40,40,40)) drop-shadow(0 -2px 2px rgb(40,40,40));
+  pointer-events: none;
+}
+
+
+.sidebanner_content_left a{
+  border:solid 2px #904313;
+  border-left:none;
+  flex:1;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.sidebanner_content_right a{
+  border:solid 2px #b78226;
+  border-right:none;
+  flex:1;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  position:relative;
+}
+
+.sidebanner_content img{
+  transition:0.3s;
+}
+
+.sidebanner_content_left img{
+  width:50px;
+}
+
+.sidebanner_content_right img{
+  width:40px;
+}
+
+.qr-img{
+  width:70px !important;
+}
+
+.sidebanner_content a:hover{
+  background:  linear-gradient(to right,#915914, #64380a, #915914);
+}
+
+.sidebanner_content a:hover img{
+  filter:brightness(0) invert(1);
+}
+
+.sidebanner_content a:hover .qr-img{
+  filter:none;
+}
+
+
+.hover_info{
+  height:85%;
+  width:200px;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:70px;
+  z-index: -1;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.hover_info span{
+  padding:15px 0 15px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  background: linear-gradient(to right, transparent, var(--color1), var(--color1));
+  opacity: 0;
+  transition: 0.3s;
+}

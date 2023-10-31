@@ -1,0 +1,206 @@
+.slider{
+  width:100%;
+  height:450px;
+  background-image:url('@/assets/infiniwin/img/slide/slider_bg.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+.slider_content{
+  width:1200px;
+  margin:0 auto;
+  height:100%;
+  position:relative;
+}
+
+#canvas1{
+  margin:0;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.slide{
+  position:relative;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+}
+
+.slide_img{
+  width:100%;
+  -webkit-animation: tilt-in-fwd-tr 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-fwd-tr 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide_caption,.slide_model,.slide_bg{
+  position:absolute;
+}
+
+.slide1 .slide_caption{
+  left:0;
+  height:280px;
+  z-index: 2;
+  bottom:50px;
+  left:180px;
+  -webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide1 .slide_model{
+  z-index: 1;
+  height:400px;
+  bottom:0;
+  right:180px;
+  -webkit-animation: fade-in-right 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation-delay: 0.3s;
+}
+
+.slide1 .slide_bg{
+  height:330px;
+  bottom:20px;
+  left:360px;
+  -webkit-animation: tilt-in-fwd-tr 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-fwd-tr 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+.slider_control{
+  display:flex;
+  position:absolute;
+  bottom:30px;
+  right:140px;
+  z-index: 1;
+}
+
+.slide_dot{
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.slide_dot_active{
+    background-color: #f90;
+}
+
+.slide_btn{
+  /*width:50px;*/
+  margin-left: 10px;
+  /*opacity: 0.7;*/
+  transition: 0.3s;
+  cursor:pointer;
+}
+
+.slide_btn img{
+  width:100%;
+}
+
+.slide_btn:hover{
+  opacity: 1;
+}
+
+.active_btn{
+  opacity: 1;
+  /*transform: translateY(-10px);*/
+  filter:brightness(120%);
+}
+
+
+
+
+/**
+ * ----------------------------------------
+ * animation tilt-in-fwd-tr
+ * ----------------------------------------
+ */
+@-webkit-keyframes tilt-in-fwd-tr {
+  0% {
+    -webkit-transform:perspective(200px)  rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            transform:perspective(200px)  rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform:perspective(200px)  rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform:perspective(200px)  rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-fwd-tr {
+  0% {
+    -webkit-transform:perspective(200px)  rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            transform:perspective(200px)  rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform:perspective(200px)  rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform:perspective(200px) rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+
+
+
+/**
+ * ----------------------------------------
+ * animation fade-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bck-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform:perspective(1000px)  translateZ(600px);
+            transform:perspective(1000px)  translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform:perspective(1000px)  translateZ(0);
+            transform:perspective(1000px)  translateZ(0);
+    opacity: 1;
+  }
+}

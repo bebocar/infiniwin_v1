@@ -1,0 +1,236 @@
+.slot_banner{
+  width:100%;
+}
+
+
+.slot_body{
+  background-image: url('../img/slot/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.slot_content{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:120px 0;
+  position:relative;
+}
+
+.slot_row{
+  display:flex;
+  justify-content: center;
+  margin:-2px 0;
+}
+
+.slot_item{
+  background: var(--gradient1);
+  height:150px;
+  width:150px;
+  -moz-transform: rotate(45deg) scale(1.2);
+  -webkit-transform: rotate(45deg) scale(1.2);
+  transform: rotate(45deg) scale(1.2);
+  margin:0 70px;
+  padding:4px;
+  transition: 0.3s;
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+  position:relative;
+}
+
+.slot_item_img{
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  background: #282425;
+  position:relative;
+}
+
+.slot_item_img::after{
+  content:"Play Now";
+  position:absolute;
+  right:-65px;
+  bottom:0;
+  -moz-transform: rotate(-45deg) translateY(20px);
+  -webkit-transform: rotate(-45deg) translateY(20px);
+  transform: rotate(-45deg) translateY(20px);
+  text-align: center;
+  background: black;
+  color:var(--color2);
+  font-size: 15px;
+  width:140px;
+  transition:0.3s;
+}
+
+.slot_item:hover .slot_item_img::after{
+  -moz-transform: rotate(-45deg) translateY(-40px);
+  -webkit-transform: rotate(-45deg) translateY(-40px);
+  transform: rotate(-45deg) translateY(-40px);
+}
+
+.slot_item_img img{
+  width:100%;
+}
+
+.slot_item:hover{
+  -moz-transform:rotate(45deg) scale(1.4);
+  -webkit-transform:rotate(45deg) scale(1.4);
+  transform:rotate(45deg) scale(1.4);
+  z-index: 1;
+}
+
+
+.no_show{
+  align-self: flex-end;
+  display:flex;
+  align-items: center;
+  margin-top: auto;
+  font-size: 12px;
+}
+
+
+/*----------------------------------------------------------------------*/
+
+.slot_lobby{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display:flex;
+  align-items: center;
+}
+
+
+.sl_content{
+  display:flex;
+  flex-direction: column;
+  position:relative;
+  background: rgba(20,20,20,1);
+  border-radius: 10px;
+  border:solid 2px var(--color6);
+}
+
+.sl_header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 40px;
+}
+
+.sl_logo{
+  width:170px;
+}
+
+
+.sl_back{
+  height:25px;
+  cursor:pointer;
+}
+
+.sl_nav{
+  align-self: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin:50px 0;
+  background: var(--gradient1);
+  border-radius: 20px;
+  padding:2px;
+}
+
+.sl_nav_item{
+  background: black;
+  color:var(--color1);
+  margin-right: 2px;
+  min-width: 100px;
+  text-align: center;
+  padding:5px;
+  font-size: 13px;
+  cursor:pointer;
+}
+
+.sl_nav_item:first-child{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.sl_nav_item:last-child{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin:0;
+}
+
+.sl_nav_active, .sl_nav_item:hover{
+  background: linear-gradient(to right, var(--color1),var(--color2));
+  color:black;
+}
+
+.sl_body{
+  height:70vh;
+  overflow-y: auto;
+  align-self: center;
+}
+
+
+/* width */
+.sl_body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.sl_body::-webkit-scrollbar-track {
+  background:rgb(50,50,50);
+}
+
+/* Handle */
+.sl_body::-webkit-scrollbar-thumb {
+  background: var(--color6);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.sl_body::-webkit-scrollbar-thumb:hover {
+  background: var(--color7);
+}
+
+
+.sl_body_content{
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+  gap:15px;
+  padding-left: 40px;
+}
+
+
+.sl_game{
+  background: var(--gradient1);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:3px;
+  width:150px;
+  color:black;
+  cursor:pointer;
+}
+
+.sl_game img{
+  width:144px;
+  height:144px;
+}
+
+.sl_game_name{
+  font-size: 14px;
+  font-weight: bold;
+  padding:5px 2px;
+  text-align: center;
+}
+
+.sl_game:hover{
+  background: linear-gradient(45deg,rgb(30,30,30),rgb(10,10,10),rgb(30,30,30));
+  color:white;
+}

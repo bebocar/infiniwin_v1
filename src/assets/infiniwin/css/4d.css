@@ -1,0 +1,381 @@
+.lottery{
+  background-image:url('../img/fortune/bg.jpg');
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.lottery_header{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.date_label{
+  font-family: 'Goldman', cursive;
+  margin-right: 10px;
+  font-size: 20px;
+  color:var(--color5);
+}
+
+.lottery_date{
+  margin-right: 30px;
+  color:var(--color5);
+  position:relative;
+}
+
+.lottery_date input{
+  background: none;
+  border:1px solid var(--color5);
+  color:var(--color5);
+  width:160px;
+  text-align: center;
+  padding:7px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.lottery_date i{
+  position:absolute;
+  right:8%;
+  top:50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.lottery_btn{
+  color:#ffffff;
+  font-weight: bold;
+  width:150px;
+  text-align: center;
+  padding:10px 0;
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor:pointer;
+  border:none;
+}
+
+.bet_type{
+  width:60px;
+  margin:0 5px;
+  cursor:pointer;
+}
+
+.bet_btn{
+  background: linear-gradient(var(--color3),var(--color4));
+  animation:glowing infinite 2s;
+}
+
+.payout_btn{
+  background: var(--gradient1_180);
+}
+
+.lottery_btn:hover{
+  -webkit-filter:brightness(1.3) saturate(1.3);
+  filter:brightness(1.3) saturate(1.3);
+}
+
+.lottery_content{
+  display:flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.lotterys_date{
+font-family: 'Goldman', cursive;
+  width:100%;
+  text-align: center;
+  color:white;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.lottery_table{
+  width:280px;
+  margin:0 10px 20px 10px;
+}
+
+
+.lottery_table table{
+  width:100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.lottery_table th{
+  background: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.lottery_table td{
+  text-align: center;
+  font-size: 13px;
+  padding:5px 0;
+  color:white;
+  background: rgba(0,0,0,0.3)
+}
+
+.lottery_table th img{
+  height:35px;
+}
+
+
+.sandakan th{
+  background: var(--sandakan_color);
+  border:solid 2px var(--sandakan_color);
+}
+.sandakan td{
+  border:solid 2px var(--sandakan_color);
+}
+
+.magnum th{
+  background: var(--magnum_color);
+  border:solid 2px var(--magnum_color);
+}
+.magnum td{
+  border:solid 2px var(--magnum_color);
+}
+
+.damacai th{
+  background: var(--damacai_color);
+  border:solid 2px var(--damacai_color);
+  color:white;
+}
+.damacai td{
+  border:solid 2px var(--damacai_color);
+}
+
+.toto th, .gd th{
+  background: var(--toto_color);
+  border:solid 2px var(--toto_color);
+}
+.toto td, .gd td{
+  border:solid 2px var(--toto_color);
+}
+
+.singapore th{
+  background: var(--singapore_color);
+  border:solid 2px var(--singapore_color);
+}
+.singapore td{
+  border:solid 2px var(--singapore_color);
+}
+
+.sabah th{
+  background: var(--sabah_color);
+  border:solid 2px var(--sabah_color);
+  color:white;
+}
+.sabah td{
+  border:solid 2px var(--sabah_color);
+}
+
+.sarawak th{
+  background: var(--sarawak_color);
+  border:solid 2px var(--sarawak_color);
+}
+.sarawak td{
+  border:solid 2px var(--sarawak_color);
+}
+
+
+
+
+/*------Payout table, Bet Popup--------*/
+
+.lottery_popup{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  position:fixed;
+  z-index: 9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  display:none;
+}
+
+.lottery_popup_content{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(20,20,20,0.8);
+  border-radius: 5px;
+  position:relative;
+  border:solid 1px var(--color6);
+  max-height: 90%;
+}
+
+.lottery_popup_header{
+  display:flex;
+  align-items: center;
+  width:100%;
+  background: var(--gradient1);
+  padding:10px;
+  font-size: 20px;
+}
+
+.lottery_popup_close{
+  margin-left: auto;
+  color:black;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.payout_table_body{
+  overflow-y: auto;
+  display:flex;
+  flex-direction: column;
+  max-height: 600px;
+}
+
+/* width */
+.payout_table_body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.payout_table_body::-webkit-scrollbar-track {
+  background:rgb(50,50,50);
+}
+
+/* Handle */
+.payout_table_body::-webkit-scrollbar-thumb {
+  background: var(--color6);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.payout_table_body::-webkit-scrollbar-thumb:hover {
+  background: var(--color7);
+}
+
+.gd_payout{
+  display:none;
+}
+
+.payout_nav{
+  align-self: center;
+  display:flex;
+  align-items: center;
+  color:var(--color6);
+  width:90%;
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+
+.payout_nav_item{
+  display:flex;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 10px;
+  padding:3px 10px;
+  border:solid 1px var(--color6);
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.payout_nav_item img{
+  height:25px;
+  margin-right: 3px;
+}
+
+.payout_nav_active{
+  background: var(--gradient1);
+  color:black;
+  border-color:transparent;
+}
+
+.payout_table{
+  margin:30px;
+  width:500px
+}
+
+.payout_table h2{
+  color:white;
+  font-size: 18px;
+  margin:0;
+}
+
+.payout_table p{
+  font-size: 13px;
+  color:white;
+  margin:5px 0;
+}
+
+.payout_table table{
+  background: white;
+  border-collapse: collapse;
+  width:100%;
+}
+
+.payout_table th{
+  background: var(--gradient1);
+  font-size: 16px;
+  padding:5px 0;
+}
+
+.payout_table td{
+  text-align: center;
+  font-size: 15px;
+  padding:5px;
+  border:solid 1px grey;
+}
+
+.lottery_bets{
+  display:flex;
+  justify-content: center;
+  padding:15px;
+}
+
+.bet_item{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px 10px;
+  background: rgb(30,30,30);
+  margin:0 10px;
+  border-radius: 5px;
+  width:100px;
+}
+
+.bet_item img{
+  height:50px;
+  margin-bottom: 5px;
+}
+
+.bet_item button{
+  color:var(--color5);
+  background: rgb(10,10,10);
+  border:none;
+  border-radius: 2px;
+  padding:5px;
+  width:100%;
+  text-align: center;
+  margin-top: 10px;
+  cursor:pointer;
+}
+
+.bet_item button:hover{
+  background: var(--color5);
+  color:black;
+}
+
+
+@keyframes glowing {
+
+    from,to{
+      filter:drop-shadow(0 0 5px var(--color1));
+    }
+
+    50%{
+      filter:drop-shadow(0 0 2px var(--color1));
+    }
+
+}

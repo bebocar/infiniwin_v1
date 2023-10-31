@@ -1,0 +1,61 @@
+.fishing{
+  height:800px;
+  background-image:url('../img/fishing/bg.png');
+  background-size: cover;
+  background-position: bottom;
+  position:relative;
+  display:flex;
+}
+
+.fish_content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  padding-bottom: 250px;
+  z-index: 2;
+}
+
+.fish_item{
+  margin:0 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.fish_item:nth-child(2){
+  animation-delay:-2s;
+}
+
+.fish_item img{
+  width:320px;
+}
+
+.bubble{
+  position:absolute;
+}
+
+.bubble1{
+  width:20%;
+  left:18%;
+  bottom:0;
+}
+
+.bubble2{
+  width:15%;
+  right:20%;
+  bottom:10%;
+  transform:scaleX(-1);
+}
+
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

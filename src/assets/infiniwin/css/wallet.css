@@ -1,0 +1,218 @@
+
+/*__________________________WALLET SECTION___________________________________________*/
+
+
+/*_Main wallet and reward points_*/
+
+.wallet{
+  display:flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.wallet_top{
+  display:flex;
+}
+
+.wallet_top_item{
+  display:flex;
+  border:solid 2px var(--color8);
+  padding:3px;
+  margin-right: 10px;
+}
+
+.wallet_top_label{
+  display:flex;
+  align-items: center;
+  background: var(--color8);
+  border:solid 1px var(--color8);
+  min-height: 60px;
+  height:100%;
+  padding:0 10px;
+  
+}
+
+.wallet_top_label img{
+  margin-right: 5px;
+  height:30px;
+}
+
+.wallet_top_value{
+  min-height: 60px;
+  height:100%;
+  background: white;
+  border:solid 2px var(--color2);
+  display:flex;
+  align-items: center;
+  padding:0 10px;
+}
+
+.currency_label{
+  font-weight: bold;
+  font-size: 20px;
+  margin-right:5px;
+}
+
+.wallet_vip{
+  height:40px;
+  -webkit-animation: blink-1 1.5s both infinite;
+        animation: blink-1 1.5s both infinite;
+}
+
+.deposit_now_btn{
+  margin-left: auto;
+  text-decoration:
+  none;
+  transition: 0.2s;
+}
+
+.wallet_top_item:hover{
+  -webkit-filter:brightness(1.2) saturate(1.2);
+  filter:brightness(1.2) saturate(1.2);
+}
+
+.wallet_top_value h1{
+  margin:0;
+  font-size: 20px;
+  color:black;
+}
+
+.vip_status{
+  cursor:pointer;
+}
+
+
+/*---Button label---*/
+
+.btn_label{
+  display:flex;
+  align-items: center;
+  margin:15px 5px 10px 5px;
+}
+
+.btn_label_item{
+  display:flex;
+  align-items: center;
+  margin-right: 25px;
+  color:var(--color2);
+}
+
+.btn_label_item img{
+  height: 25px;
+  margin-right: 5px;
+}
+
+
+
+/*___Wallet items_____*/
+
+.wallet_bottom{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.item_wallet{
+  width:16%;
+  margin:3px;
+  display:flex;
+  background-color: white;
+}
+
+.item_wallet_left{
+  flex:4;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding:5px;
+}
+
+.item_wallet_amount{
+  background-color: black;
+  color:var(--color2);
+  font-size:15px;
+  font-weight: bold;
+  padding:5px;
+}
+
+.item_wallet_name{
+  color:black;
+  padding:5px;
+  font-size:12px
+}
+
+.item_wallet_right{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top:3px;
+}
+
+.allin_btn,.allout_btn{
+  border:none;
+  border-radius: 2px;
+  box-shadow: none;
+  margin:2px 5px 2px 0px;
+  width:30px;
+  height:25px;
+  color:black;
+  font-style: normal;
+  font-weight:bold;
+  text-align: center;
+  transition: .2s;
+  -webkit-filter:drop-shadow(1px 1px 1px black);
+  filter:drop-shadow(1px 1px 1px black);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.allin_btn{
+  background-image: url('../img/fund/wallet/in-button.png');
+}
+
+.allout_btn{
+  background-image: url('../img/fund/wallet/out-button.png');
+}
+
+.allin_btn:hover ,.allout_btn:hover{
+  -webkit-filter:brightness(1.2);
+  filter:brightness(1.2);
+}
+
+
+
+/**
+ * ----------------------------------------
+ * animation blink-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  25%,
+  75% {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  25%,
+  75% {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

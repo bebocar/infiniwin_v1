@@ -1,0 +1,89 @@
+.info{
+  height:600px;
+  background-image: url('../Images/other/other_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding:50px 0;
+}
+
+
+.info_content{
+  background: rgba(0,0,0,0.5);
+  height:100%;
+  border-radius: 10px;
+  overflow-y: auto;
+  padding:0 20px;
+  color:white;
+  font-size: 14px;
+  display:flex;
+  flex-direction: column;
+}
+
+.info_content h3{
+  font-size: 20px;
+}
+
+
+.info_content h3{
+  font-size: 20px;
+}
+
+
+.banking_table{
+  width:100%;
+  border-collapse: collapse;
+  border:solid 1px rgb(50,50,50);
+}
+
+.banking_table th{
+  background: grey;
+  border:solid 1px rgb(50,50,50);
+  padding:5px 0;
+  font-size: 15px;
+}
+
+.banking_table td{
+  text-align: center;
+  border:solid 1px rgb(50,50,50);
+  padding:5px 0;
+  font-size: 15px;
+}
+
+.banking_table a{
+  color:var(--color1);
+  text-decoration: underline;
+}
+
+/*----------------------Contact------------------------------*/
+
+.contact_table{
+  width:300px;
+}
+
+.contact_table td{
+  padding:10px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.contact_table a{
+  color:var(--color1);
+  text-decoration:underline;
+}
+
+/*----------------------faq------------------------------*/
+
+.btit{
+  color:var(--color1);
+}
+
+/*----------------------Bitcoin------------------------------*/
+
+.bitcoin_banner{
+  width:100%;
+}
+
+.bitcoin_gif{
+  align-self: center;
+  margin:20px 0;
+}

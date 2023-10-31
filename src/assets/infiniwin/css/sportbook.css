@@ -1,0 +1,100 @@
+.sb{
+  background-image: url('../img/sb/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/*.sb_content{*/
+  /*display:flex;*/
+/*}*/
+
+.sb_nav{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  -webkit-filter:drop-shadow(2px 2px 2px black);
+  filter:drop-shadow(2px 0px 2px black);
+  width:250px;
+}
+
+.sb_nav_item{
+  height:200px;
+  -webkit-filter:brightness(0.7);
+  filter:brightness(0.7);
+  transition: 0.3s;
+  cursor:pointer;
+  z-index: 1;
+}
+
+.sb_nav_item:hover{
+  -webkit-filter:none;
+  filter:none;
+  transform: translateX(10px);
+}
+
+.sb_nav_active{
+  height:220px;
+  -webkit-filter:none;
+  filter:none;
+  transform: translateX(20px);
+}
+
+.sb_nav_active:hover{
+  -webkit-filter:none;
+  filter:none;
+  transform: translateX(20px);
+}
+
+
+
+.sb_nav_item:nth-child(2){padding-right: 16px;}
+.sb_nav_item:nth-child(3){padding-right: 32px;}
+
+/*--------------Iframe--------------------------*/
+
+.iframe_container{
+    margin: auto;
+    height: 1200px;
+}
+
+.iframe_content{
+  height:100%;
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1450px) {
+    .iframe_content.isport{
+        transform: scale(0.88,1);
+        transform-origin: top;
+    }
+}
+
+.iframe_header{
+  background: black;
+  height:120px;
+  padding:10px 0;
+  position:relative;
+}
+
+.iframe_header img{
+  height:100%;
+}
+
+.iframe_header span{
+  position:absolute;
+  left:30px;
+  top:50%;
+  transform:translateY(-50%) skewX(-5deg);
+  font-size: 50px;
+  font-family: azonix;
+  text-transform: uppercase;
+  color:black;
+  color:white;
+}
+
+.iframe_content iframe{
+  width:100%;
+  flex:1;
+}

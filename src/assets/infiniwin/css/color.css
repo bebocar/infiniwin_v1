@@ -1,0 +1,41 @@
+:root{
+
+  --color1:#dcc36c;
+  --color2:#b68d40;
+
+  --color3:#ee2e00;
+  --color4:#921a01;
+
+  --color5:#fa9e00;
+  --color6:#da6900;
+
+  --color7:#904313;
+  --color8:#e87b37;
+
+  --color9:#2d1f05;
+    --color10:#ffffff;
+
+  --gradient1:linear-gradient(#904313,#e87b37,#904313);
+  --gradient1_180:linear-gradient(#e87b37,#904313);
+
+  --gradient2:linear-gradient(#21180c,#1c191a);
+
+  --gradient3:linear-gradient(#3d2e13,#4d4223);
+
+  --grey:#979797;
+
+  --gold1:#DFBD69;
+  --gold2:#926F34;
+
+  --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+
+  --magnum_color:#b8860b;
+  --damacai_color:#231f54;
+  --sabah_color:#003c10;
+  --sandakan_color:#fdb913;
+  --sarawak_color:#ff5400;
+  --singapore_color:#2c80fd;
+  --toto_color:#ec1c24;
+
+}

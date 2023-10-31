@@ -35,21 +35,21 @@ const router = createRouter({
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   const token = localStorage.getItem('token')
-//
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//     // Check if the route requires authentication
-//     if (!token) {
-//       // Redirect to the login page if the user is not authenticated
-//       next('/')
-//     } else {
-//       // Proceed to the route if the user is authenticated
-//       next()
-//     }
-//   } else {
-//     // For public routes, proceed without checking authentication
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem('token')
+
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // Check if the route requires authentication
+    if (!token) {
+      // Redirect to the login page if the user is not authenticated
+      next('/')
+    } else {
+      // Proceed to the route if the user is authenticated
+      next()
+    }
+  } else {
+    // For public routes, proceed without checking authentication
+    next()
+  }
+})
 export default router

@@ -1,11 +1,11 @@
-/*@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');*/
-/*!*  font-family: 'Yanone Kaffeesatz', sans-serif; *!*/
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+/*  font-family: 'Yanone Kaffeesatz', sans-serif; */
 
-/*@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');*/
-/*!*  font-family: 'Audiowide', cursive;*!*/
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+/*  font-family: 'Audiowide', cursive;*/
 
 
-/*@font-face {*/
-/*  font-family: azonix;*/
-/*  src: url(../fonts/Azonix.otf);*/
-/*}*/
+@font-face {
+  font-family: azonix;
+  src: url(../fonts/Azonix.otf);
+}
